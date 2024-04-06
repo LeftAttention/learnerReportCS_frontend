@@ -1,0 +1,4 @@
+apiVersion: v2
+name: frontend
+description: A Helm chart for the frontend of the MERN application
+version: 1.0.0

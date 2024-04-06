@@ -1,0 +1,13 @@
+replicaCount: 1
+
+image:
+  repository: <your-ecr-url>/frontend
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+
+env:
+  BACKEND_URL: "http://<backend-service-ip>"
