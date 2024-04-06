@@ -98,7 +98,7 @@ const Users = (props) => {
   useEffect(() => {
   
     async function fetchUsers() {
-      let res = await axios.get("http://localhost:3000/student/getstudent")
+      let res = await axios.get("${process.env.BACKEND_URL}/student/getstudent")
       console.log(res.data);
       ctx.setListOfUsers(res.data);
     }

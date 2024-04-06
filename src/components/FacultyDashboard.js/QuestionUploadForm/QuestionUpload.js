@@ -53,7 +53,7 @@ export default function QuestionUpload() {
             return;
         }
         let total_marks =parseInt(value.total_marks)
-        let res = await axios.post("http://localhost:3000/uploadQuestion", {
+        let res = await axios.post("${process.env.BACKEND_URL}/uploadQuestion", {
             question_title: value.question_title,
             question: value.question,
             tag_level: value.tag_level,

@@ -98,7 +98,7 @@ const Career = (props) => {
   useEffect(() => {
   
     async function fetchUsers() {
-      let res = await axios.get("http://localhost:3000/careerService/getcareer")
+      let res = await axios.get("${process.env.BACKEND_URL}/careerService/getcareer")
       setListOfUsers(res.data.result);
     }
     fetchUsers()
